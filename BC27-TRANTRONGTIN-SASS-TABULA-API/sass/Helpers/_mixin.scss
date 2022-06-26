@@ -1,0 +1,22 @@
+// Hover Transition 
+
+@mixin hoverTransition {
+    box-shadow: 0 0 0 3em #b61984 inset;
+    transition: all 300ms ease;
+}
+@mixin flexCenter {
+    display : flex ; 
+    justify-content : center ; 
+    align-items : center ;
+}
+@mixin borderRadius {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+@mixin background-image {
+    background-size :cover ; 
+    background-position : center ;
+    background-repeat: no-repeat;
+}

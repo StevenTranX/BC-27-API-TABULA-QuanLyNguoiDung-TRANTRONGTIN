@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+html,
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+header {
+  z-index: 99999999999;
+}
+
+header .header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .logo {
+  width: 80px;
+  height: 80px;
+}
+
+header .logo img {
+  width: 100%;
+  display: block;
+}
+
+header .nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 250px;
+}
+
+header .nav li {
+  padding-right: 50px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+header .nav li a {
+  color: #000;
+}
+
+header .contact {
+  margin-right: -120px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+header .contact .phone {
+  width: 180px;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.9rem;
+  background-color: #b61984;
+  color: #fff;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+header .contact .phone a {
+  margin: 6px;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+header .contact .phone:hover {
+  color: #b61984;
+  -webkit-box-shadow: 0 0 0 0.5px #b61984 inset;
+          box-shadow: 0 0 0 0.5px #b61984 inset;
+  background-color: #fff;
+  border: 0.5px solid #b61984;
+}
+
+header .contact .media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .contact .media i {
+  font-size: 13px;
+  padding-right: 10px;
+}
+/*# sourceMappingURL=main.css.map */

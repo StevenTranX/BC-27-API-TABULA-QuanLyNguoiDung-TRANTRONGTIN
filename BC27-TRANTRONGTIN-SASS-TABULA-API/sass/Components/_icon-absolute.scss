@@ -1,0 +1,17 @@
+.icon-absolute {
+    position : absolute;
+    top : 50%;
+    transform : translateY(-50%);
+    left : 14px;
+    font-size : $font-nav;
+    color : $primary-color;
+    z-index : 10;
+}
+.icon-absolute-top-left {
+    position : absolute;
+    top : 15px;
+    left : 14px;
+    font-size : $font-nav;
+    color : $primary-color;
+    z-index : 10;
+}
