@@ -76,6 +76,7 @@ function handleSubmit(event) {
   if (type === 'add') {
     addUser();
   } else if (type = 'update') {
+    
     updateUser ();
   }
 }
@@ -179,6 +180,7 @@ function updateUser () {
     description,
     image,
   );
+  
   apiUpdateUsers(user)
     .then(function (result) {
       init();
@@ -214,7 +216,8 @@ function validation () {
   const language = document.getElementById('loaiNgonNgu').value;
   const description = document.getElementById('MoTa').value;
   let isValid = true ; 
-
+  const letters = new RegExp("^[A-Za-z]+$");
+  const emailsPattern = new RegExp("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$")
   if (!isRequired(username)) {
     isValid = false
     document.getElementById('spanUsername').innerHTML = "Tài khoản không được để trống"
@@ -223,6 +226,9 @@ function validation () {
   if (!isRequired(fullName)) {
     isValid = false
     document.getElementById('spanFullName').innerHTML = "Họ tên không được để trống"
+  } else if (!letters.test(fullName)) {
+    isValid = false;
+    document.getElementById('spanFullName').innerHTML = "Họ tên có kí tự không hợp lệ"
   }
   if (!isRequired(password)) {
     isValid = false
@@ -231,7 +237,11 @@ function validation () {
   if (!isRequired(email)) {
     isValid = false
     document.getElementById('spanEmail').innerHTML = "Email không được để trống"
+  }  else if (!emailsPattern.test(email)) {
+    isValid = false;
+    document.getElementById('spanEmail').innerHTML = "Email không đúng định dạng"
   }
+
   if (!isRequired(image)) {
     isValid = false
     document.getElementById('spanImage').innerHTML = "Hình Ảnh không được để trống"
@@ -264,4 +274,5 @@ function minLength (value, maxLimit ) {
   }
   return true ;
 }
+
 
