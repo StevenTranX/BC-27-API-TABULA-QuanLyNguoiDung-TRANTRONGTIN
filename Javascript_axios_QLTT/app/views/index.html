@@ -182,6 +182,7 @@
                   class="form-control"
                   placeholder="Nhập vào tài khoản"
                 />
+                <span id = "spanUsername" style = "color:red"></span>
               </div>
               <div class="form-group">
                 <label>Họ tên</label>
@@ -190,6 +191,7 @@
                   class="form-control"
                   placeholder="Nhập vào họ tên"
                 />
+                <span id = "spanFullName" style = "color:red"></span>
               </div>
               <div class="form-group">
                 <label>Mật khẩu</label>
@@ -199,6 +201,7 @@
                   placeholder="Nhập vào mật khẩu"
                   type="password"
                 />
+                <span id = "spanPassword" style = "color:red"></span>
               </div>
               <div class="form-group">
                 <label>Email</label>
@@ -207,6 +210,7 @@
                   class="form-control"
                   placeholder="Nhập vào Email"
                 />
+                <span id = "spanEmail" style = "color:red"></span>
               </div>
               <div class="form-group">
                 <label>Hình Ảnh</label>
@@ -215,19 +219,21 @@
                   class="form-control"
                   placeholder="Nhập vào hình ảnh"
                 />
+                <span id = "spanImage" style = "color:red"></span>
               </div>
               <div class="form-group">
                 <label for="">Loại Người Dùng: </label>
-                <select class="form-control" id="loaiNguoiDung">
-                  <option>Chọn loại người dùng</option>
+                <select class="form-control required" id="loaiNguoiDung" required ="required">
+                  <option selected="" value =''>Chọn loại người dùng</option>
                   <option value="GV">Giáo viên</option>
                   <option value="HV">Học viên</option>
                 </select>
+                <span id = "spanUserType" style = "color:red"></span>
               </div>
               <div class="form-group">
                 <label for="">Loại Ngôn Ngữ: </label>
-                <select class="form-control" id="loaiNgonNgu">
-                  <option>Chọn ngôn ngữ</option>
+                <select class="form-control required" required ="required" id="loaiNgonNgu">
+                  <option selected="" value=""> Chọn ngôn ngữ </option>
                   <option>ITALIAN</option>
                   <option>FRENCH</option>
                   <option>JAPANESE</option>
@@ -236,6 +242,7 @@
                   <option>SWEDEN</option>
                   <option>SPANISH</option>
                 </select>
+                <span id = "spanLanguage" style = "color:red"></span>
               </div>
               <div class="form-group">
                 <label>Mô tả</label>
@@ -245,6 +252,7 @@
                   class="form-control"
                   placeholder="Nhập vào mô tả"
                 ></textarea>
+                <span id = "spanDescription" style = "color:red"></span>
               </div>
             </div>
             <!-- Modal footer -->

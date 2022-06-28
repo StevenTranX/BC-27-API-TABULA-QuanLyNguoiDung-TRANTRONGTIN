@@ -112,6 +112,11 @@ function addUser() {
     description,
     image,
   );
+   let isValid = validation ()
+   if (!isValid) {
+    console.log ('Invalid Input')
+    return
+   }
   apiAddUsers(user)
     .then(function (result) {
       init();
@@ -197,5 +202,66 @@ function resetForm() {
 
   $("#myModal").modal("hide");
 
+}
+function validation () {
+  const userId = document.getElementById('UserId').value; 
+  const username = document.getElementById('TaiKhoan').value;
+  const fullName = document.getElementById('HoTen').value;
+  const password = document.getElementById('MatKhau').value;
+  const email = document.getElementById('Email').value;
+  const image = document.getElementById('HinhAnh').value;
+  const userType = document.getElementById('loaiNguoiDung').value;
+  const language = document.getElementById('loaiNgonNgu').value;
+  const description = document.getElementById('MoTa').value;
+  let isValid = true ; 
+
+  if (!isRequired(username)) {
+    isValid = false
+    document.getElementById('spanUsername').innerHTML = "Tài khoản không được để trống"
+  } 
+  
+  if (!isRequired(fullName)) {
+    isValid = false
+    document.getElementById('spanFullName').innerHTML = "Họ tên không được để trống"
+  }
+  if (!isRequired(password)) {
+    isValid = false
+    document.getElementById('spanPassword').innerHTML = "Mật khẩu không được để trống"
+  }
+  if (!isRequired(email)) {
+    isValid = false
+    document.getElementById('spanEmail').innerHTML = "Email không được để trống"
+  }
+  if (!isRequired(image)) {
+    isValid = false
+    document.getElementById('spanImage').innerHTML = "Hình Ảnh không được để trống"
+  }
+  if (userType === "") {
+    isValid = false
+    document.getElementById('spanUserType').innerHTML = "Vui lòng chọn người dùng"
+  }
+  if (language === "") {
+    isValid = false
+    document.getElementById('spanLanguage').innerHTML = "Vui lòng chọn ngôn ngữ"
+  }
+  if (!isRequired(description)) {
+    isValid = false
+    document.getElementById('spanDescription').innerHTML = "Mô tả không được để trống"
+  } else if (!minLength(description,60)) {
+    isValid = false
+    document.getElementById('spanDescription').innerHTML = "Độ dài không vượt quá 60 ký tự"
+  }
+  return isValid
+}
+
+function isRequired (value) {
+  if (!value) return false
+  return true
+}
+function minLength (value, maxLimit ) {
+  if (value.length > maxLimit ) {
+    return false
+  }
+  return true ;
 }
 
